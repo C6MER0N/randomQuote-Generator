@@ -2,38 +2,37 @@
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-var html;
 
+// a array of objects stored in a variable named quotes.
 var quotes = [
-  { quote:"this is a test quote",
-    source:"cameron james",
-    year: '2018',
+  { quote:"dont let yesterday take up to much of today.",
+    source:"Johann WolfGang",
+    year: '2018'
   },
   {
-    quote:"test quote 2",
-    source:"cameron james",
+    quote:"the people that are crazy enough to change the world are the ones that do ",
+    source:"Steve Jobs",
     year:'2018'
   },
   {
-    quote: "test quote 3",
-    source: "cameron james ",
+    quote: "be the change you want to see in the world.",
+    source: "Unknown",
     year: '2018'
   }
 ];
 
+// generates a random quote then returns the random quote generated
 function getRandomQuote() {
-  for (var i = 0; i <= quotes.length; i++) {
-    Math.floor(Math.random() * quotes.length);
-  }
+  var randNum = Math.floor(Math.random() * quotes.length);
+  return quotes[randNum];
 }
 getRandomQuote();
 
+// prints quote to the screen
 function printQuote() {
   var randquote = getRandomQuote();
-  html += '<p class="quote">' + randquote.quotes + '</p>';
-  html += '<p class="source">' + randquote.quotes  + '</p>';
+  var html = '<p class="quote">' + randquote.quote + '</p>';
+  html += '<p class="source">' + randquote.source  + '</p>';
 document.getElementById('quote-box').innerHTML = html;
-
-printQuote();
-getRandomQuote();
 }
+printQuote();
