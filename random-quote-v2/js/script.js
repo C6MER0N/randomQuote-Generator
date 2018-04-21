@@ -17,8 +17,19 @@ var quotes = [
   {
     quote: "be the change you want to see in the world.",
     source: "Unknown",
-    year: '2018'
+    year: "2018"
+  },
+  {
+    quote: "i destory my enemy when i make him my friend",
+    source: "Abe Licoln",
+    year: "2018"
+  },
+  {
+    quote: "success doesnt come easy you have to go take it.",
+    source: "Unknown",
+    year: "2018"
   }
+
 ];
 
 // generates a random quote then returns the random quote generated
